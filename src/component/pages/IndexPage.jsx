@@ -5,7 +5,7 @@ export default function IndexPage() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/post')
+    fetch('https://api-adtu.onrender.com/post')
       .then(res => res.json())
       .then(data => setPosts(data));
   }, []);

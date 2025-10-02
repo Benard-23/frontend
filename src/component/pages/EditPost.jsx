@@ -13,7 +13,7 @@ export default function EditPost() {
 
   // ✅ Load the current post
   useEffect(() => {
-    fetch(`http://localhost:4000/post/${id}`)
+    fetch(`https://api-adtu.onrender.com/post/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
         return res.json();
@@ -40,7 +40,7 @@ export default function EditPost() {
   if (file) data.set("file", file);
 
   try {
-    const res = await fetch(`http://localhost:4000/post/${id}`, {
+    const res = await fetch(`https://api-adtu.onrender.com/post/${id}`, {
       method: "PUT",
       body: data,
       credentials: "include",

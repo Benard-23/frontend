@@ -20,7 +20,7 @@ const CreatePost = () => {
     if (file) data.set("file", file);
 
     try {
-      const response = await fetch("http://localhost:4000/post", {
+      const response = await fetch("https://api-adtu.onrender.com/post", {
         method: "POST",
         body: data,
         credentials: "include",

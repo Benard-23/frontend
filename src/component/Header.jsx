@@ -6,7 +6,7 @@ const Header = () => {
   const { userInfo, setUserInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:4000/profile", {
+    fetch("https://api-adtu.onrender.com/profile", {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -21,7 +21,7 @@ const Header = () => {
   }, [setUserInfo]);
 
   function logout() {
-    fetch("http://localhost:4000/logout", {
+    fetch("https://api-adtu.onrender.com/logout", {
       method: "POST",
       credentials: "include",
     }).then(() => setUserInfo(null)); // ✅ clear on logout

@@ -13,7 +13,7 @@ export default function PostPage() {
     useEffect(() => {
         async function loadPost() {
             try {
-                const res = await fetch(`http://localhost:4000/post/${id}`);
+                const res = await fetch(`https://api-adtu.onrender.com/post/${id}`);
                 if (!res.ok) throw new Error(`Server returned ${res.status}`);
                 const data = await res.json();
                 setPostInfo(data);
@@ -54,7 +54,7 @@ export default function PostPage() {
             {postInfo.cover && (
                 <div className="image">
                     <img
-                        src={`http://localhost:4000/${postInfo.cover}`}
+                        src={`https://api-adtu.onrender.com/${postInfo.cover}`}
                         alt={postInfo.title}
                     />
                 </div>
